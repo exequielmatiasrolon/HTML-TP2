@@ -123,15 +123,22 @@ label{
     font-weight: 900;
     
 }
+#detallesPeli {
+    width: 50%;    
+    border: red;
+    border-radius: 4px;
+    color: white;
+    background-color: #413B3B;
+    font-weight: 900;
+    
+}
+#deallesPeli  a:hover{    /*cuando pasamos el click sobre el enlace*/
+   background-color: red;
+   color: black;
+}
 
 #footer{
-position:fixed;
-width:960px;
-height:20px;
-
-bottom:0px;
-margin-left:50%;
-left:-480px;
+color: white;
 }
 
 /*
