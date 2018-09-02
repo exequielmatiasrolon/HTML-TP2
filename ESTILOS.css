@@ -100,6 +100,7 @@ label{
   font-weight: 900;
   color: #403A3A
 
+  
 }
 
 .izq{
@@ -125,6 +126,15 @@ label{
 }
 #detallesPeli {
     width: 50%;    
+    border: red;
+    border-radius: 4px;
+    color: white;
+    background-color: #413B3B;
+    font-weight: 900;
+    
+}
+#detallesPeli1 {
+    width: 80%;    
     border: red;
     border-radius: 4px;
     color: white;
