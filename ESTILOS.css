@@ -85,8 +85,8 @@ text-align: center;
 
 
 #menu li a:hover{    /*cuando pasamos el click sobre el enlace*/
-   background-color: #333333;
-   color: #ffffff;
+   background-color: red;
+   color: black;
 }
 
 label{
@@ -97,10 +97,41 @@ label{
 #formulario{
 	text-align: left;
 	float: none;
+  font-weight: 900;
+  color: #403A3A
+
 }
 
 .izq{
 	text-align: center;
+}
+
+
+#body {
+    
+    background-image: url(https://cdn.tn.com.ar/sites/default/files/styles/1366x765/public/2018/04/05/pochoclos.jpg);
+}
+
+
+#select {
+    width: 100%;
+    
+    border: red;
+    border-radius: 4px;
+    color: white;
+    background-color: #413B3B;
+    font-weight: 900;
+    
+}
+
+#footer{
+position:fixed;
+width:960px;
+height:20px;
+
+bottom:0px;
+margin-left:50%;
+left:-480px;
 }
 
 /*
