@@ -3,94 +3,103 @@
 
 	<head>
 		<meta charset="utf-8">
+		 <meta name="viewport" content="width=device-width, initial-scale=1">
+         <link rel="stylesheet" type="text/css" href="ESTILOS.css">
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<title>Compra tu Entrada </title>
 	</head>
 
 	<body>
 	   
-	
-	<form action="#" method="GET">
-	 <label for="fecha">Fecha de Ticket:</label> <input type="date" id=fecha name="fecha1"/>
-  <br><br><br>
-<label for="hora">Horario:</label> <select name="hora" id="hora">
-	
-	<option value="14:00">14:00 </option>
-	<option value="14:30">14:30 </option>
-	<option value="21:00"> 21:00</option>
-	<option value="21:30"> 21:30</option>
-	<option value="22:00">22:00 </option>
-	<option value="22:30"> 22:30</option>
-	
-	
-	
-	
-	
-</select>
-		</form>
-<br><br>
+	<div class="row" id="encabezado">
+		 <div class="col-md-6">
+		  <form action="#" method="GET">
+		   <label for="fecha">Fecha de Ticket:</label> 
+		   <input type="date" id=fecha name="fecha1"/>
+		 </div>
+	 
+	   <div class="col-md-6">
+	 		<label for="hora">Horario:</label> 
+	 		<select name="hora" id="hora">	
+				<option value="14:00">14:00 </option>
+				<option value="14:30">14:30 </option>
+				<option value="21:00"> 21:00</option>
+				<option value="21:30"> 21:30</option>
+				<option value="22:00">22:00 </option>
+				<option value="22:30"> 22:30</option>
+			</select>
+    	</div>
+	 </div>	
+  
+ </form>
+<br>
 
-<table >
-  <tr>
-    <th>Tipos de Tickes</th>
-    <th>Cantidad</th> 
-    <th>Costo</th>
-    <th>SubTotal</th>
-  </tr>
-  <tr>
-    <td>3D LUN A MIERC DESCUENTO: </td>
-    <td><label for="cantidad"></label> <select name="cantidad" id=cantidad>
-	<option value="14:00">0</option>
-	<option value="14:30">1</option>
-	<option value="21:00">2</option>
-	<option value="21:30">3</option>
-	<option value="22:00">4</option>
-	<option value="22:30">5</option>
-    <option value="14:00">6</option>
-	<option value="14:30">7</option>
-	<option value="21:00">8</option>
-	<option value="21:30">9</option>
-	<option value="22:00">10</option></select>
-	</td>
-    <td>$90</td>
-	<td>$155</td>
-  </tr>
-  <tr>
-    <td>2X1 3D BANCO SANTANDER RIO:</td>
-    <td><label for="cantidad1"></label>
-	<select name="cantidad1" id=cantidad1>
-	<option value="14:00">0</option>
-	<option value="14:30">1</option>
-    <option value="14:30">2</option>
-		</select>
-	</td>
-    <td>$75</td>
-	  <td>$150</td>
-  </tr>
-  <tr>
-    <td>2X1 3D TARJETA NEVADA:</td>
-    <td><label for="cantidad2"></label> <select name="cantidad2" id=cantidad2>
-	<option value="14:00">0</option>
-	<option value="14:30">1</option>
-    <option value="14:30">2</option>
-		</select>
-		</td>
-    <td>$75</td>
-	  <td>$150</td>
-  </tr>
-  <tr>
-    <td>2X1 3D CLUB PERSONAL:</td>
-    <td><label for="cantidad3"></label> <select name="cantidad3" id=cantidad3>
-	<option value="14:00">0</option>
-	<option value="14:30">1</option>
-    <option value="14:30">2</option>
-		</select>
-	  </td>
-    <td>$75</td>
-	  <td>$150</td>
-  </tr>
-</table>
-	<br><br><br>
-<br> <br>
+ <div class="row">
+    <div class="col-md-3"  id="col1">
+        
+        <label class="negrita">	Tipo de Tickets</label>
+        <br>	3D Lun a Mierc Descuento
+      	<br>	2x1 3D Banco Santander Rio 
+ 	  	<br>	2x1 3D Tarjeta Nevada 
+      	<br>	2x1 3D Personal   
+          
+           
+            
+      		
+   
+    </div>
+    <div class="col-md-3"  id="col2">
+		<label class="negrita">Cantidad</label>
+   	<br>
+    	<select name="descuento" id="descuento" >
+				<option value="0">0</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+		</select>	
+		<br>
+   		<select name="santander">
+				<option value="0">0</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+			</select>
+		<br>
+        <select name="selnevada">
+				<option value="0">0</option>
+				<option value="1">1</option>
+				<option value="2">2</option>			
+			</select>	
+		<br>
+        <select name="personal">
+				<option value="0">0</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+			</select>  	
+    </div>
+    <div class="col-md-3"  id="col3">
+    		<label class+"negrita">Costo</label>
+    		<br> 90
+    		<br> 75
+    		<br> 75
+    		<br> 75
+    		    		
+    </div>
+    <div class="col-md-3" id="col4">
+    	<label class="negrita">    Sub Total</label>
+    	<br>0
+    	<br>0
+    	<br>0
+    	<br>0
+    </div>
+  </div>
+	<br>
         <input type="submit" value="Aceptar">
         <input type="reset" value="Cancelar">
 
