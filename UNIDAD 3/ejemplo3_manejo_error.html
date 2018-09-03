@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+var txt="";
+function message()
+{
+try
+  {
+  adddlert("Welcome guest!");
+  }
+catch(err)
+  {
+  txt="Se produjo un error en la pagina .\n\n";
+  txt+="Descripción del Error: " + err.message + "\n\n";
+  txt+="Click OK para continuar.\n\n";
+  alert(txt);
+  }
+}
+</script>
+</head>
+
+<body>
+<input type="button" value="Ver Mensaje" onclick="message()">
+</body>
+
+</html>

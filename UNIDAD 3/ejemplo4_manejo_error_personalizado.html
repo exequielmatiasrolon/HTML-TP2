@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+function myFunction()
+{
+var y=document.getElementById("mess");
+try
+{ 
+y.innerHTML="";
+
+var x=document.getElementById("demo").value;
+if(x=="")    throw "vacio";
+if(isNaN(x)) throw "no es un numero";
+if(x>10)     throw "muy alto";
+if(x<5)      throw "muy bajo";
+}
+catch(err)
+{
+y.innerHTML="Error: " + err + ".";
+}
+}
+</script>
+
+<h1>Mi primer Script</h1>
+<p>Por favor ingrese un numero entre 5 y 10:</p>
+<input id="demo" type="text">
+<button type="button" onclick="myFunction()">Probar</button>
+<p id="mess"></p>
+
+</body>
+</html>
