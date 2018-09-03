@@ -115,8 +115,7 @@ label{
 
 
 #select {
-    width: 100%;
-    
+    width: 100%;    
     border: red;
     border-radius: 4px;
     color: white;
@@ -124,6 +123,36 @@ label{
     font-weight: 900;
     
 }
+#select1 {
+    width: 100%;    
+    border: red;
+    border-radius: 200px;
+    color: orange;
+    background-color: #413B3B;
+    font-weight: 900;
+    
+}
+#input {
+    width: 50%;
+    padding: 3px 5px;
+    margin: 8px 0;
+    border: solid;
+    background-color: black;
+    color: orange
+    border: 1px ;
+    border-radius: 12px;;
+}
+#input1 {
+    width: 100%;
+    padding: 1px 3px;
+    margin: 0px 0;
+    border: solid;
+    background-color: black;
+    color: orange;
+    border: 1px ;
+    border-radius: 12px;;
+}
+
 #detallesPeli {
     width: 50%;    
     border: red;
@@ -158,22 +187,37 @@ color: white;
 */
 /*      Roger    */ 
 
+
+
+
 #col1 {
-	background-color:lavender;
+	background-color:black;
 	height: 225px;
+  color: orange;
+  border: 2px solid red;
+  border-radius: 12px;
 	
 	  }
-#col3 { background-color: lavender;				
+#col3 { background-color: black;				
 	height: 225px;
 	text-align: center;
+  color: orange;
+  border: 2px solid red;
+    border-radius: 12px;
 	  }
-#col2{background-color:mediumaquamarine;
+#col2{background-color:#165242;
+  color: orange;
 	height: 225px;
 	text-align: center;
+  border: 2px solid red;
+  border-radius: 12px;
      }
-#col4{background-color: mediumaquamarine;
+#col4{background-color: #165242;
+  color: orange;
 	height: 225px;
 	text-align: center;
+  border: 2px solid red;
+  border-radius: 12px;
      }
 
 .form-controlr {
@@ -193,3 +237,12 @@ color: white;
   -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
        -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
           transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+#tipos{
+
+border: 2px solid red;
+    border-radius: 12px;
+
+}
+
