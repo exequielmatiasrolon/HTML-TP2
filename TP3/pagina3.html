@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+		
+			<link rel="stylesheet" type="text/css" href="ESTILOS.css">
+			<link rel="stylesheet" type="text/css" href="bootstrap.css">
+			<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+			<title>Cinemacenter</title>
+	
+
+	</head>
+
+	<body id=body>
+
+
+	<div id="encabezado" class="container-fluid">
+				<header>
+							<br>
+					<h1> <strong>CINEMACENTER SUCURSAL IMPERIAL</strong></h1>
+							<br>
+				</header>
+			</div>
+
+
+
+		
+			<div class="row">
+				<div id="menu" class="container-fluid">
+					<nav>
+						<ul class="nav navbar-nav">
+							<br><br><li class="col-md-3"><a href="#"> Peliculas en Cartel</a></li>
+							<li class="col-md-3"><a href="#">Horarios</a></li>
+							<li class="col-md-3"><a href="#">Proximos estrenos</a></li>
+							<li class="col-md-3"><a href="#">Precios</a></li>
+						</ul>
+					</nav>
+				</div>		
+				
+			</div>
+									
+
+
+
+	<nav class="navbar navbar-inverse">
+		  <div class="navbar-header" class="col-md-4">
+	     					 <a class="navbar-brand" href="#"><img src="https://vignette.wikia.nocookie.net/logopedia/images/5/53/Logo-cine-cinema1.svg/revision/latest?cb=20131116025202" height="35"></a>
+	   			 </div>
+  		
+  		<div class="container-fluid" id="select1" >	  			
+
+   			  	 <div class="col-md-4">
+		  				<form action="#" method="GET">
+				 			    <label for="fecha">Fecha de Ticket:</label> 
+				   				<input type="date" id=input name="fecha1"/> 
+		   				</form>
+				 </div>
+
+
+				<div class="col-md-4">	
+	   				<form action="#" method="GET">
+			   			<label for="hora">Horario:</label> 
+			 				<select name="hora" id=input  >	
+								<option value="14:00">14:00 </option>
+								<option value="14:30">14:30 </option>
+								<option value="21:00"> 21:00</option>
+								<option value="21:30"> 21:30</option>
+								<option value="22:00">22:00 </option>
+								<option value="22:30"> 22:30</option>
+							</select>
+	   				</form>   
+	 				
+    			</div>		
+
+   		
+ 	 </div>
+</nav>
+
+
+
+
+<br>
+
+ <div class="row"  >
+		 <div class="col-md-3"  id="col1">
+			        
+			        <label class="negrita" id="input">	Tipo de Tickets</label>
+			        <br>	3D Lun a Mierc Descuento
+			      	<br><br>	2x1 3D Banco Santander Rio 
+			 	  	<br><br>	2x1 3D Tarjeta Nevada 
+			      	<br><br>	2x1 3D Personal                                   
+			      		  
+		 </div>
+
+		<div class="col-md-3"  id="col2">
+					<label class="negrita" id="input">Cantidad</label>
+			   	<br>
+			    	<select name="descuento" id="input1" class="form-controlr" >
+							<option value="0">0</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+					</select>	
+					<br>
+			   		<select name="santander" class="form-controlr" id="input1">
+							<option value="0">0</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+						</select>
+					<br>
+			        <select name="selnevada" class="form-controlr" id="input1">
+							<option value="0">0</option>
+							<option value="1">1</option>
+							<option value="2">2</option>			
+						</select>	
+					<br>
+			        <select name="personal" class="form-controlr" id="input1">
+							<option value="0">0</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+						</select>  
+							
+		</div>
+
+		<div class="col-md-3"  id="col3">
+			    		<label class="negrita" id="input"">Costo</label>
+			    		<br> 90
+			    		<br><br> 75
+			    		<br><br> 75
+			    		<br><br> 75
+			    		    		
+		</div>
+
+		<div class="col-md-3" id="col4">
+			    	<label class="negrita" id="input">    Sub Total</label>
+			    	<br>0
+			    	<br><br>0
+			    	<br><br>0
+			    	<br><br>0
+		</div>
+
+
+  </div>
+						<br>
+
+
+
+
+
+  	<div class="text-center">	
+      		<button type="submit" class="btn btn-primary "> Aceptar</button>
+      		<button type="reset" class="btn btn-danger"> Cancelar</button>
+     </div>      
+
+	<br><br>
+
+
+
+
+
+
+
+	<footer class="page-footer font-small white" id="footer">
+						<div class="footer-copyright text-center py-3 ">© 2018 Copyright: Argentina, Todos los derechos reservados
+  						</div>
+					</footer>	
+  
+
+
+<script src="css/bootstrap.css"></script>
+<script src="js/jquery-3.3.1.slim.min.js"></script>
+<script src="js/popper.min.js"></script>
+
+</body>
+
+</html>
