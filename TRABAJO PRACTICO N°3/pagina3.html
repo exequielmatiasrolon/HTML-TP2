@@ -42,48 +42,53 @@
 				</div>		
 				
 			</div>
-									
+							
 
+	<hr>
 
+	<div class="container-fluid">
 
-	<nav class="navbar navbar-inverse">
-		  <div class="navbar-header" class="col-md-4">
-	     					 <a class="navbar-brand" href="#"><img src="https://vignette.wikia.nocookie.net/logopedia/images/5/53/Logo-cine-cinema1.svg/revision/latest?cb=20131116025202" height="35"></a>
-	   			 </div>
-  		
-  		<div class="container-fluid" id="select1" >	  			
+	<form action="#" method="GET"  onsubmit="return validacion()">
 
-   			  	 <div class="col-md-4">
-		  				<form action="#" method="GET">
-				 			    <label for="fecha">Fecha de Ticket:</label> 
-				   				<input type="date" id=input name="fecha1"/> 
-		   				</form>
-				 </div>
-
-
-				<div class="col-md-4">	
-	   				<form action="#" method="GET">
-			   			<label for="hora">Horario:</label> 
-			 				<select name="hora" id=input  >	
-								<option value="14:00">14:00 </option>
-								<option value="14:30">14:30 </option>
-								<option value="21:00"> 21:00</option>
-								<option value="21:30"> 21:30</option>
-								<option value="22:00">22:00 </option>
-								<option value="22:30"> 22:30</option>
-							</select>
-	   				</form>   
+				<div class="col-md-12" >	
+				
+					 	<div class="container-fluid" id="select1" >	  	
+								<nav class="navbar navbar-inverse" id="input1">
+									 	 <div class="navbar-header" class="col-md-4">
+								     					 <a class="navbar-brand" href="#"><img src="https://vignette.wikia.nocookie.net/logopedia/images/5/53/Logo-cine-cinema1.svg/revision/latest?cb=20131116025202" height="35"></a>
+								   		 </div>
+							  				
+											<div class="col-md-4">
+													   <label for="fecha">Fecha de Ticket:</label> 
+											   			<input type="date" id="input" name="fecha1"/> 
+											</div>
+							   			  	
+											<div class="col-md-4">
+													<label for="hora">Horario:</label> 
+										 				<select name="hora" id=input>	
+															<option value="14:00">14:00 </option>
+															<option value="14:30">14:30 </option>
+															<option value="21:00"> 21:00</option>
+															<option value="21:30"> 21:30</option>
+															<option value="22:00">22:00 </option>
+															<option value="22:30"> 22:30</option>
+														</select>
+											</div>
+								</nav>
+						</div>
+							    
+				<hr>
 	 				
     			</div>		
 
    		
- 	 </div>
-</nav>
+ 	 
 
 
 
 
-<br>
+
+<br> <br>
 
  <div class="row"  >
 		 <div class="col-md-3"  id="col1">
@@ -155,13 +160,25 @@
 						<br>
 
 
-
+	<hr>
 
 
   	<div class="text-center">	
       		<button type="submit" class="btn btn-primary "> Aceptar</button>
       		<button type="reset" class="btn btn-danger"> Cancelar</button>
      </div>      
+
+		</form>
+
+
+		
+	</div>
+
+	
+  		
+
+
+		
 
 	<br><br>
 

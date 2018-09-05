@@ -130,6 +130,7 @@ label{
     color: orange;
     background-color: #413B3B;
     font-weight: 900;
+
     
 }
 #input {
@@ -140,7 +141,7 @@ label{
     background-color: black;
     color: orange
     border: 1px ;
-    border-radius: 12px;;
+    border-radius: 199px;;
 }
 #input1 {
     width: 100%;
@@ -150,7 +151,7 @@ label{
     background-color: black;
     color: orange;
     border: 1px ;
-    border-radius: 12px;;
+    border-radius: 100px;;
 }
 
 #detallesPeli {
