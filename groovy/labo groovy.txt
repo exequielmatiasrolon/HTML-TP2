@@ -1,0 +1,26 @@
+
+class estudiante{ 
+            string nombre
+            string dni
+            integer edad, calificacion
+            string cuidadNatal
+
+}
+
+class curso {
+            def resetearNotas(){}
+            def agregarEstudiante(unEstudiante)?{}
+            def cantidadDeEstudiantesInscriptos(){}
+            def estudiantes(){}
+            def estudiantesAprobados(){}
+            def existeEstudiante(unEstudiante){}
+            def existeEstudianteConNotaDiez(){}
+            def existeEstudianteLlamado(unNombre)(){}
+            def porcentajeDeAprobados(){}
+            def promedioDeCalificaciones(){}
+            def estudiantesNoCatamarquenios(){}
+            def calificacionMasFrecuente(){}
+            def ciudadesExceptoCatamarca(){}
+            def unDesastre(){}
+            def frecuenciaDeEdades(){}
+?}?
