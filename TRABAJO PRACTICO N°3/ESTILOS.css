@@ -143,6 +143,16 @@ label{
     border: 1px ;
     border-radius: 199px;;
 }
+#input22 {
+    width: 50%;
+    padding: 3px 5px;
+    margin: 8px 0;
+    border: solid;
+    background-color: black;
+    color: orange
+    border: 1px ;
+    border-radius: 199px;;
+}
 #input1 {
     width: 100%;
     padding: 1px 3px;
