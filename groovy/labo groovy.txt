@@ -8,7 +8,8 @@ class estudiante{
 }
 
 class curso {
-            def resetearNotas(){}
+            def resetearNotas(){//}
+
             def agregarEstudiante(unEstudiante)?{}
             def cantidadDeEstudiantesInscriptos(){}
             def estudiantes(){}
