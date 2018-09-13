@@ -1,22 +1,39 @@
 
-class estudiante{ 
-            string nombre
-            string dni
-            integer edad, calificacion
-            string cuidadNatal
+class estudiantes{ 
+            String nombre
+            String dni
+            Integer edad, nota
+            String cuidadNatal
+            
+            def mostrar(){"nombre: ${nombre} dni: ${dni} " }
 
 }
 
-class curso {
-            def resetearNotas(){//}
+class cursos {
+            String nombre
+            List estudiantes=[] 
+          
+            def agregarEstudiante(unEstudiante){
+                    this.estudiantes += unEstudiante}
 
-            def agregarEstudiante(unEstudiante)?{}
-            def cantidadDeEstudiantesInscriptos(){}
-            def estudiantes(){}
-            def estudiantesAprobados(){}
+
+            def cantidadDeEstudiantesInscriptos(){
+                  "La cantidad de alumnos inscriptos es : ${this.estudiantes.size()}" }
+
+            def resetearNotas(){}
+           
+            
+            def estudiantes(){
+                 //closure
+                 this.estudiantes.each{println it.nombre}
+                             }
+
+            def estudiantesAprobados(){
+                  this.estudiantesfindAll{ item -> item % 2 == 1}
+                              }
             def existeEstudiante(unEstudiante){}
             def existeEstudianteConNotaDiez(){}
-            def existeEstudianteLlamado(unNombre)(){}
+            def existeEstudianteLlamado(unNombre){}
             def porcentajeDeAprobados(){}
             def promedioDeCalificaciones(){}
             def estudiantesNoCatamarquenios(){}
@@ -24,4 +41,14 @@ class curso {
             def ciudadesExceptoCatamarca(){}
             def unDesastre(){}
             def frecuenciaDeEdades(){}
-?}?
+}
+
+def alumno = new estudiantes(nombre:"Roger", dni:1,nota: 7 )??
+def alumno2 = new estudiantes(nombre:"Pedro", dni:2, nota: 4)
+def curso = new cursos(nombre:"Programacion 3")
+curso.agregarEstudiante(alumno)
+curso.agregarEstudiante(alumno2)
+println alumno?.mostrar()
+println curso.cantidadDeEstudiantesInscriptos()
+? curso.?????????????????????????????????????????????????????????estudiantes ????
+//curso.estudiantesAprobados???????????????????????????????????????????????????????????????????????

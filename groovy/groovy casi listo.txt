@@ -1,0 +1,73 @@
+
+class estudiantes{ 
+            String nombre
+            String dni
+            Integer edad, nota
+            String cuidadNatal
+            
+            def mostrar(){"nombre: ${nombre} dni: ${dni} " }
+            def cambiarNota(unEstudiante,unaNota){ unEstudiante.nota = unaNota}
+
+}
+
+class cursos {
+            String nombre
+            List estudiantes=[] 
+          
+            def agregarEstudiante(unEstudiante){
+                    this.estudiantes += unEstudiante}
+
+
+            def cantidadDeEstudiantesInscriptos(){
+                  "La cantidad de alumnos inscriptos es : ${this.estudiantes.size()}" }         
+           
+            
+            def estudiantes(){
+                 def store = ''
+                 this.estudiantes.each {item -> store += item}
+                 return estudian
+                             }
+
+            def estudiantesAprobados(){
+                 def aprobados = this.estudiantes.findAll{ item -> item.nota > 3 }
+                    return aprobados
+                  //  println this.estudiantes[0].nombre
+                              }
+            def resetearNotas(){ this.estudiantes.each {item -> item.nota = 0}                    
+                                }
+            def existeEstudiante(unEstudiante){ this.estudiantes.findAll{item -> item.dni == unEstudiante.dni} }
+            def existeEstudianteConNotaDiez() { 
+                        def notaDiez = this.estudiantes.findAll{item -> item.nota == 10} 
+                        return notaDiez
+                                }
+            def existeEstudianteLlamado(unNombre){
+                    def existen = this.estudiantes.findAll {item -> item.nombre == unNombre}
+                    return existen 
+                                }
+            def porcentajeDeAprobados(){
+                  return  (this.estudiantesAprobados() * 100) / this.cantidadDeEstudiantesInscriptos()
+                                        }
+            def promedioDeCalificaciones(){}
+            def estudiantesNoCatamarquenios(){}
+            def calificacionMasFrecuente(){}
+            def ciudadesExceptoCatamarca(){}
+            def unDesastre(){}
+            def frecuenciaDeEdades(){}
+}
+
+def alumno = new estudiantes(nombre:"Roger", dni:1,nota: 10 )
+def alumno2 = new estudiantes(nombre:"Pedro", dni:2, nota: 3)
+def alumno3 = new estudiantes(nombre:"Pablo", dni:3, nota: 9)
+def curso = new cursos(nombre:"Programacion 3")
+curso.agregarEstudiante(alumno)
+curso.agregarEstudiante(alumno2)
+// ok println alumno.mostrar()
+// ok println curso.cantidadDeEstudiantesInscriptos()
+// ok curso.estudiantes.nombre
+// ok curso.estudiantesAprobados().nombre
+// ok curso.resetearNotas().nota
+// ok curso.existeEstudiante(alumno3).nombre 
+// ok curso.existeEstudianteConNotaDiez().nombre
+// ok curso.existeEstudianteLlamado("Pedro").nombre
+// no println curso.porcentajeDeAprobados()
+
