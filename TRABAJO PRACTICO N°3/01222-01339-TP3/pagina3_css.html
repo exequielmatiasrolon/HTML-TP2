@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="estilos.css">
+  <link rel="stylesheet" href="bootstrap.css">
+  <link rel="icon" type="image/jpg" href="cineicono.png">
+  <script src="validarCampos.js"></script>
+<title>Cine</title>
+
+</head>
+	<body onload="ocultar()">
+	<form action="#" method="GET" >
+	<br>
+        <label for="fecha">Fecha de Ticket:</label>
+        <input type="date" id="fecha" name="fecha" onchange="return validarfecha()" required>
+	<br><br>
+           <label for="horario">Horario:</label>
+
+                <select name="horario" id="horario">
+                  <option id="14">14:00</option>
+                  <option id="1430">14:30</option>
+                  <option id="21">21:00</option>
+                  <option id="2130">21:30</option>
+                  <option id="22">22:00</option>
+                  <option id="2230">22:30</option>
+               </select>
+<div class="table-responsive">
+<table class="tabla" onchange="validarpago()">
+
+  <tr>
+    <th>TIPO DE TICKETS</th>
+    <th>CANT</th>
+    <th>COSTO:</th>
+    <th>SUBTOTAL:</th>
+  </tr>
+
+  <tr>
+    <td>3D LUN A MIERC DESCUENTO:</td>
+    <td>
+    <select id="cantidaddia">
+
+        <option value=0>0</option>
+        <option value=1>1</option>
+        <option value=2>2</option>
+        <option value=3>3</option>
+        <option value=4>4</option>
+        <option value=5>5</option>
+        <option value=6>6</option>
+        <option value=7>7</option>
+        <option value=8>8</option>
+        <option value=9>9</option>
+        <option value=10>10</option>
+
+       </select>
+    </td>
+    <td class="precio">$90</td>
+   <td id="subtotaldia"></td>
+  </tr>
+
+  <tr>
+    <td>2X1 3D BANCO SANTANDER RIO:</td>
+    <td>
+<select id="cantidadrio">
+
+        <option value=0>0</option>
+        <option value=1>1</option>
+        <option value=2>2</option>
+</select>
+    </td>
+    <td class="precio">$75</td>
+<td id="subtotalrio"></td>
+  </tr>
+
+  <tr>
+    <td>2X1 3D TARJETA NEVADA:</td>
+    <td>
+<select id="cantidadnevada">
+
+        <option value=0>0</option>
+        <option value=1>1</option>
+        <option value=2>2</option>
+</select>
+    </td>
+    <td class="precio">$75</td>
+    <td id="subtotalnevada"></td>
+  </tr>
+
+ <tr>
+    <td>2X1 3D CLUB PERSONAL: </td>
+    <td>
+<select id="cantidadpersonal">
+
+        <option>0</option>
+        <option>1</option>
+        <option>2</option>
+</select>
+    </td>
+    <td class="precio">$75</td>
+    <td id="subtotalpersonal"></td>
+  </tr>
+
+  <tr>
+    <td><label id="textopersonal" for="tarjetapersonal">CÓDIGO PERSONAL3D:</label></td>
+    <td>
+    <input type="text" id="tarjetapersonal" name="codigotarjeta">
+  </td>
+ </tr>
+
+ <tr>
+   <td><label id="textorio" for="tarjetario">PRIMEEOS 6 DÍGITOS TARJETA SANTANDER RÍO:</label></td>
+   <td>
+   <input type="text" id="tarjetario" name="codigotarjeta">
+ </td>
+</tr>
+
+<tr>
+  <td><label id="textonevada" for="tarjetanevada">PRIMEEOS 6 DÍGITOS TARJETA NEVADA:</label></td>
+  <td>
+  <input type="text" id="tarjetanevada" name="codigotarjeta">
+</td>
+</tr>
+
+  <tr>
+    <td></td>
+    <td class="preciofinal">INCLUYE IVA</td>
+    <td class="preciofinal">TOTAL:</td>
+    <td class="preciofinal" id="preciofinal"></td>
+  </tr>
+
+
+</table>
+<button type="submit" value="Submit">Aceptar</button>
+<button type="reset" value="Reset">Cancelar</button>
+</form>
+
+ <footer>
+        <div class="piepagina">
+            <p>Argentina, Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="jquery-3.3.1.min.js"> </script>
+    <script src="bootstrap.js"> </script>
+
+	</body>
+</html>

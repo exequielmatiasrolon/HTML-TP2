@@ -1,9 +1,6 @@
 function Tarea (titulo,fecha) {
     this.titulo = titulo;
     this.fecha = fecha;
-//	this.categoria = categoria;
-//	this.prioridad = prioridad;
-	// agregar las otras propiedades
 }
 
 
@@ -12,17 +9,14 @@ function Agenda (propietario) {
     this.tareas = [];
 }
 
-// modifica el contructor y agrega el metodo para cada objeto
 Agenda.prototype.addTarea = function(t) {
 	this.tareas.push(t);
 };
 
-//metodo eliminar tarea
-
 //definicion de una variable global para almacenar una agenda.
 var globalAgenda;
 
-// body iniciaar en on load
+
 function iniciar(){
 	var seccionCreacionAgenda = document.getElementById("creacionAgenda");
 	var duenioAgenda= document.getElementById("duenioAgenda");
@@ -36,18 +30,14 @@ function iniciar(){
 	var listaTareas =document.getElementById("listaTareas");
 	var btnAddTarea = document.getElementById("btnAddTarea");
 
-	var inputTareaTitulo = document.getElementById("tareaNombre");
-	var inputTareaHorario = document.getElementById("hora");
-	var fecha = document.getElementById("fecha");
-	var categoria = document.getElementById("categoria");
-	var prioridad = document.getElementById("prioridad");
-	// agregar mas variables
+	var inputTareaTitulo = document.getElementById("titulotarea");
+	var inputTareaHorario = document.getElementById("fechatarea");
 
 	seccionDatoAgenda.style.display="none";
 	bloqueGestionTareas.style.display="none";
 	seccionCreacionAgenda.style.display="";
 
-	
+
 	//cuando hace click en el boton crear agenda se crea la agenda del duenio en la variable global
 	btnCrearAgenda.addEventListener('click',function(){
 		globalAgenda = new Agenda(duenioAgenda.value);
@@ -59,20 +49,24 @@ function iniciar(){
 
 //cuando hace click en el boton crear agenda se crea la agenda del duenio en la variable global
 	btnAddTarea.addEventListener('click',function(){
-		
-		//var t = new Tarea(inputTareaTitulo.value,fecha.value,categoria.value,prioridad.value);
-		var t = new Tarea(inputTareaTitulo,fecha); 
-		//alert("entra" + inputTareaTitulo.value);
+		var t = new Tarea(inputTareaTitulo.value,inputTareaHorario.value);
 		globalAgenda.addTarea(t);
-	//	alert("entra" + t.titulo);
 		var li = document.createElement("li");
+    var enlace=document.createElement("a");
   		li.appendChild(document.createTextNode(t.titulo+" - "+t.fecha));
-		listaTareas.appendChild(li);
+      enlace.appendChild(li);
+      enlace.setAttribute("href","#");
+  		listaTareas.appendChild(enlace);
+
   		inputTareaTitulo.value='';
 		inputTareaHorario.value='';
-		prioridad.value='';
-		categoria.value='';
-  		
-		// agregar el resto
+
+    for (var i = 0; i <= listaTareas.children.length -1; i++) {
+  listaTareas.children[i].addEventListener("click", function(){
+    this.parentNode.removeChild(this);
+  });
+}
   	});
+
+
 }

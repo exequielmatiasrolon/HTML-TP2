@@ -1,0 +1,42 @@
+<html>
+<head>
+	<title>Laboratorio 03</title>
+	<!--COMPLETAR#1 -->
+  	<script src="agenda.js"></script>
+</head>
+
+<body onload="iniciar()"> <!--COMPLETAR#2-->
+	<header id="header">
+		<h1>Agenda</h1>
+		<div id="creacionAgenda">
+			<div>Due&ntilde;o de la agenda</div>
+			<div><input type="text" id="duenioAgenda" /></div>
+			<div><!--COMPLETAR#3-->
+				<button type="button" id="btnCrearAgenda">Crear Agenda</button>
+			</div>
+		</div>
+		<div id="datoAgenda">
+			<div>Due&ntilde;o de la agenda</div>
+			<p id="nombreDuenioAgenda"></p>
+		</div>
+	</header><!-- /header -->
+	<div id="bloqueGestionTareas">
+		<div id="seccionFormABMTarea">
+			<form id="frmABMTarea">
+				<div>
+				<!--COMPLETAR#4-->
+				<input type="text" id="titulotarea" placeholder="Ingrese el titulo de la tarea">
+				<input type="time" id="fechatarea">
+
+				<button id="btnAddTarea" type="button">Agregar</button>
+				</div>
+			<form>
+		</div>
+		<h2>Gestion de tareas</h2>
+		<ul  id="listaTareas"></ul>
+	</div>
+	<footer>
+
+	</footer>
+</body>
+</html>

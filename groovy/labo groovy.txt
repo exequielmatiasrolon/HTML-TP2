@@ -1,11 +1,11 @@
-
 class estudiantes{ 
             String nombre
             String dni
             Integer edad, nota
-            String cuidadNatal
+            String ciudadNatal
             
             def mostrar(){"nombre: ${nombre} dni: ${dni} " }
+            def cambiarNota(unEstudiante,unaNota){ unEstudiante.nota = unaNota}
 
 }
 
@@ -18,37 +18,100 @@ class cursos {
 
 
             def cantidadDeEstudiantesInscriptos(){
-                  "La cantidad de alumnos inscriptos es : ${this.estudiantes.size()}" }
-
-            def resetearNotas(){}
+                  "La cantidad de alumnos inscriptos es : ${this.estudiantes.size()}" }         
            
             
             def estudiantes(){
-                 //closure
-                 this.estudiantes.each{println it.nombre}
+                 def store = ''
+                 this.estudiantes.each {item -> store += item}
+                 return estudian
                              }
 
             def estudiantesAprobados(){
-                  this.estudiantesfindAll{ item -> item % 2 == 1}
-                              }
-            def existeEstudiante(unEstudiante){}
-            def existeEstudianteConNotaDiez(){}
-            def existeEstudianteLlamado(unNombre){}
-            def porcentajeDeAprobados(){}
-            def promedioDeCalificaciones(){}
-            def estudiantesNoCatamarquenios(){}
-            def calificacionMasFrecuente(){}
+                 def aprobados = this.estudiantes.findAll{ item -> item.nota > 3 }
+                    return aprobados
+                                       }
+            def resetearNotas(){ this.estudiantes.each {item -> item.nota = 0}                    
+                                }
+
+            def existeEstudiante(unEstudiante){ this.estudiantes.findAll{item -> item.dni == unEstudiante.dni} }
+
+            def existeEstudianteConNotaDiez() { 
+                        def notaDiez = this.estudiantes.findAll{item -> item.nota == 10} 
+                        return notaDiez
+                                }
+            def existeEstudianteLlamado(unNombre){
+                    def existen = this.estudiantes.findAll {item -> item.nombre == unNombre}
+                    return existen 
+                                }
+            def porcentajeDeAprobados(){
+                  //return  (this.estudiantesAprobados() * 100) / this.cantidadDeEstudiantesInscriptos()
+                   def aprobados = this.estudiantes.findAll{ item -> item.nota > 3 }
+                   def total = ( aprobados.size() * 100 ) / this.estudiantes.size()
+                   println total
+                                        }
+
+            def promedioDeCalificaciones(){  
+                            def suma = 0 
+                            this.estudiantes.each { item -> suma += item.nota } 
+                                   println "el promedio es: ${suma/this.estudiantes.size()}" 
+                                            }
+
+            def estudiantesNoCatamarquenios(){
+                            def aprobados = this.estudiantes.findAll{ item -> item.ciudadNatal =="cata" }
+                            return aprobados.size()
+                                            }
+
+            def calificacionMasFrecuente(){
+                            def frecunte = [0,0,0,0,0,0,0,0,0,0]
+                                //frecunte[0] = this.estudiantes.findAll{item -> item.nota==1}
+                                this.estudiantes.each {item -> switch (item.nota) {
+                                                                       case 1: frecuente[0] += 1
+                                                                                break 
+                                                                       case 2: frecuente[1] += 1 
+                                                                                break 
+                                                                       case 3: frecuente[2] +=1 
+                                                                                break     
+                                                                       case 4: frecuente[3] +=1 
+                                                                                break 
+                                                                       case 5: frecuente[4] +=1 
+                                                                                break 
+                                                                       case 6: frecuente[5] +=1 
+                                                                                break 
+                                                                       case 7: frecuente[6] +=1 
+                                                                                break 
+                                                                       case 8: frecuente[7] +=1 
+                                                                                break 
+                                                                       case 9: frecuente[8] +=1 
+                                                                                break 
+                                                                       case 10: frecuente[9] +=1 
+                                                                                break
+                                                                        
+                                                                       
+                                                                                   } // del switch
+                                                       }// del clousure
+                                print "La nota mas frecunte es ${frecunte.max()}"
+                                            }
             def ciudadesExceptoCatamarca(){}
             def unDesastre(){}
             def frecuenciaDeEdades(){}
 }
 
-def alumno = new estudiantes(nombre:"Roger", dni:1,nota: 7 )??
-def alumno2 = new estudiantes(nombre:"Pedro", dni:2, nota: 4)
+def alumno = new estudiantes(nombre:"Roger",  dni:1, nota: 2, ciudadNatal: "cba" )
+def alumno2 = new estudiantes(nombre:"Pedro", dni:2, nota: 3, ciudadNatal: "cata")
+def alumno3 = new estudiantes(nombre:"Pablo", dni:3, nota: 9, ciudadNatal: "Cata")
 def curso = new cursos(nombre:"Programacion 3")
 curso.agregarEstudiante(alumno)
 curso.agregarEstudiante(alumno2)
-println alumno?.mostrar()
-println curso.cantidadDeEstudiantesInscriptos()
-? curso.?????????????????????????????????????????????????????????estudiantes ????
-//curso.estudiantesAprobados???????????????????????????????????????????????????????????????????????
+// ok println alumno.mostrar()
+// ok println curso.cantidadDeEstudiantesInscriptos()
+// ok curso.estudiantes.nombre
+// ok curso.estudiantesAprobados().nombre
+// ok curso.resetearNotas().nota
+// ok curso.existeEstudiante(alumno3).nombre 
+// ok curso.existeEstudianteConNotaDiez().nombre
+// ok curso.existeEstudianteLlamado("Pedro").nombre
+// ok curso.porcentajeDeAprobados()
+// ok curso.promedioDeCalificaciones()
+// ok curso.estudiantesNoCatamarquenios()
+curso.calificacionMasFrecuente()
