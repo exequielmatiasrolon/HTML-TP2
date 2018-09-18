@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Guardias</title>
+<br>
+</head>
+
+<body>
+	<h1>Guardias</h1>
+	<Label>Periodo mensual:</Label>
+	<input type="number" pattern="[0-9]{4}/[1-12]" placeholder="aaaa/mm">
+	<br>
+	<label>numero cuil;</label>
+	<input type="number" placeholder="xx-xxxxxx-xx" pattern="[09]{2}-[09]{6}-[09]{2}">
+	<label>Nombre:</label>
+	<br>
+	<input type="text" placeholder="nombre">
+	<br>
+	<label>Mail:</label>
+	<input type="mail" >
+	<br>
+	<label>Hora inicio gurardia:</label>
+	<input list="prueba">
+		<datalist id="prueba">
+			<option value ="08:00">08:00</option>
+			<option value="12:00">12:00</option>
+			<option value="00:00">00:00</option>
+		</datalist>	
+		<br>
+		<label>Duracion:</label>		
+		<select>			
+			<option value="8">08</option>
+			<option value="12">12 </option>
+			<option value-"00">00</option>
+		</select>
+		<br>
+		<label>Dureacion:</label>
+		<input type="radio" name="uno" value="uno" required>cosas
+		<input type="radio" name="uno" value ="nada gil">raras
+</body>
+</html>

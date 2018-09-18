@@ -40,7 +40,9 @@ function iniciar(){
 	var inputTareaHorario = document.getElementById("hora");
 	var fecha = document.getElementById("fecha");
 	var categoria = document.getElementById("categoria");
-	var prioridad = document.getElementById("prioridad");
+	var prioridad1 = document.getElementById("prioridad1");
+	var prioridad2 = document.getElementById("prioridad2");
+	var prioridad3 = document.getElementById("prioridad3");
 	// agregar mas variables
 
 	seccionDatoAgenda.style.display="none";
@@ -61,12 +63,28 @@ function iniciar(){
 	btnAddTarea.addEventListener('click',function(){
 		
 		//var t = new Tarea(inputTareaTitulo.value,fecha.value,categoria.value,prioridad.value);
-		var t = new Tarea(inputTareaTitulo,fecha); 
+	 	
+	/*	var prio = document.getElementById("priorid");
+		var seleccion;
+		if(prio == "1"){
+			seleccion = document.getElementById("prioridad1").value
+		}*/
+
+		var t = new Tarea(inputTareaTitulo.value,fecha.value); 
 		//alert("entra" + inputTareaTitulo.value);
 		globalAgenda.addTarea(t);
-	//	alert("entra" + t.titulo);
+		//alert("entra" + t.titulo);
 		var li = document.createElement("li");
-  		li.appendChild(document.createTextNode(t.titulo+" - "+t.fecha));
+		
+		var boton = document.createElement("input");
+			boton.setAttribute("id","unico");
+			boton.setAttribute("type","button");
+			boton.setAttribute("value","Eliminar");	    
+     		boton.addEventListener("click",function(){
+			this.parentNode.parentNode.removeChild(this.parentNode)});
+		
+  		li.appendChild(document.createTextNode(t.titulo+" - "+t.fecha +"  -  "));
+		li.appendChild(boton);
 		listaTareas.appendChild(li);
   		inputTareaTitulo.value='';
 		inputTareaHorario.value='';
