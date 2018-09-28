@@ -1,6 +1,7 @@
-function Tarea (titulo,fecha) {
+function Tarea (titulo,fecha,idd) {
     this.titulo = titulo;
     this.fecha = fecha;
+	this.id=idd;
 //	this.categoria = categoria;
 //	this.prioridad = prioridad;
 	// agregar las otras propiedades
@@ -17,10 +18,19 @@ Agenda.prototype.addTarea = function(t) {
 	this.tareas.push(t);
 };
 
+Agenda.prototype.delTarea = function(i){
+    this.tareas.splice(i,1);
+//	for(x in this.tareas){alert("nombre " + this.tareas.)}
+};
+
 //metodo eliminar tarea
 
 //definicion de una variable global para almacenar una agenda.
 var globalAgenda;
+var serie=0;
+//var s = function()    { return  serie += 1;}
+//var x = function(a,b) { return a + b;   } 
+//var globalSerie =function(){ Serie +=1}
 
 // body iniciaar en on load
 function iniciar(){
@@ -69,9 +79,11 @@ function iniciar(){
 		if(prio == "1"){
 			seleccion = document.getElementById("prioridad1").value
 		}*/
-
-		var t = new Tarea(inputTareaTitulo.value,fecha.value); 
-		//alert("entra" + inputTareaTitulo.value);
+		serie +=1;
+		var t = new Tarea(inputTareaTitulo.value,fecha.value,serie); 
+		
+		//alert("entra " + serie);
+		
 		globalAgenda.addTarea(t);
 		//alert("entra" + t.titulo);
 		var li = document.createElement("li");
@@ -81,9 +93,10 @@ function iniciar(){
 			boton.setAttribute("type","button");
 			boton.setAttribute("value","Eliminar");	    
      		boton.addEventListener("click",function(){
-			this.parentNode.parentNode.removeChild(this.parentNode)});
+					this.parentNode.parentNode.removeChild(this.parentNode); //globalAgenda.delTarea()
+					});
 		
-  		li.appendChild(document.createTextNode(t.titulo+" - "+t.fecha +"  -  "));
+  		li.appendChild(document.createTextNode(t.titulo+" - "+t.fecha + " - "+ t.id + "  -  "));
 		li.appendChild(boton);
 		listaTareas.appendChild(li);
   		inputTareaTitulo.value='';
