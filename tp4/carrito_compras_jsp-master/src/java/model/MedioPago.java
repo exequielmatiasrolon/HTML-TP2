@@ -9,6 +9,17 @@ package model;
  *
  * @author Keko Matias Rolon
  */
-public class Venta {
+public class MedioPago {
+        
+    Usuario Usuario;
+    String NroTarjeta;
+    String NombreTitular;
+    String MesVenc;
+    String AñoVenc;
+    int CodSeguridad;
+    
+    
+    
+    
     
 }

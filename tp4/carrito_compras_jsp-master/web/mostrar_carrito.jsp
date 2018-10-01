@@ -130,7 +130,7 @@
                         <th colspan="6">Monto Total del Carrito: <%= carrito.sumarMontoProductos()%> </th>
                     </tr>
                     <tr>
-                        <th colspan="6"><a href="comprar.jsp>" class="btn btn-success"><span class="glyphicon glyphicon-shopping-cart"></span> Finalizar Compra</a></th>
+                        <th colspan="6"><a href="venta.jsp" class="btn btn-success"><span class="glyphicon glyphicon-shopping-cart"></span> Finalizar Compra</a></th>
                     </tr>
                   </tfoot>
                 <tbody>
