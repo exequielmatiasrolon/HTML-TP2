@@ -92,7 +92,7 @@
         <div class="container-fluid text-center" id="formularioventa" style="background-color: yellow "> 
             <form action="index.jsp">
                 <fieldset >
-                <legend style="color: blue; font-size:50px">COMPRA REALIZADA CON EXITO!</legend>
+                <legend style="color: blue; font-size:50px">COMPRA REALIZADA CON EXITO! Y LA MAMI?</legend>
                 Nombre de Usuario : <label id="datos" style="color: red;"><%= usuario.getNombre()%></label>
                 <hr>
                 Correo Electronico : <label id="datos" style="color: red" ><%= usuario.getEmail() %></label>
