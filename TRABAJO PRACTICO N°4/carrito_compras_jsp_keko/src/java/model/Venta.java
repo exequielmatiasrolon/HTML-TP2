@@ -5,15 +5,53 @@
  */
 package model;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Keko Matias Rolon
  */
-public class Venta {
+public class Venta implements Serializable{
     
     
     private String nombre;
     private String email;
+    private String Fecha;
+    private String Hora;
+    private String NroTarjeta;
+    private String Montocompra;
+
+    public String getFecha() {
+        return Fecha;
+    }
+
+    public void setFecha(String Fecha) {
+        this.Fecha = Fecha;
+    }
+
+    public String getHora() {
+        return Hora;
+    }
+
+    public void setHora(String Hora) {
+        this.Hora = Hora;
+    }
+
+    public String getNroTarjeta() {
+        return NroTarjeta;
+    }
+
+    public void setNroTarjeta(String NroTarjeta) {
+        this.NroTarjeta = NroTarjeta;
+    }
+
+    public String getMontocompra() {
+        return Montocompra;
+    }
+
+    public void setMontocompra(String Montocompra) {
+        this.Montocompra = Montocompra;
+    }
     
     
      public String getNombre() {

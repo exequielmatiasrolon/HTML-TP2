@@ -25,7 +25,8 @@
         carrito= (Carrito) session.getAttribute("carrito");
     }
 %>
-  
+
+
   
   
 
@@ -96,7 +97,7 @@
         
         
         <div class="container-fluid text-center" id="formularioventa"> 
-            <form action="ventarealizada.jsp">
+            <form name="keko" id="keko" action="ventarealizada.jsp">
                 <fieldset>
                 <legend>Formulario de Confirmacion de Compra!</legend>
                 Nombre de Usuario : <label id="datos"><%= usuario.getNombre()%></label>
@@ -146,6 +147,11 @@
 
 		    <tr> <!--  PRIMERA FILA -->
 		    		<!-- TITULO DE LA TABLA CON TH -->
+                                
+                               
+                                
+                                
+                                
 		          	<th> Ingrese N° de Tarjeta de Credito: </th>
 				<td> <input type="text" maxlength="16" id="numerotarjeta" name="numerotarjeta" required title="Ingrese el Numero de su Tarjeta"> </td>
 		   		
@@ -178,7 +184,7 @@
           
                         
                         <span class="glyphicon glyphicon-shopping-cart text-center"></span>
-                        <input  class="btn btn-success text-center" type="submit" value="Confirmar la Compra" >
+                        <input class="btn btn-success text-center" type="submit" value="Confirmar la Compra" >
                     
                       <hr>
                 

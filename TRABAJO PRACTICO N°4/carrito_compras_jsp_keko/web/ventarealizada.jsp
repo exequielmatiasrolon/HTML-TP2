@@ -38,7 +38,11 @@
         <link rel="stylesheet" href="estilos/estilos.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ 
+        
+        
         <title>Confirmacion de la Compra</title>
+        
     </head>
     <body >
         
@@ -90,10 +94,16 @@
                  
         
         <div class="container-fluid text-center" id="formularioventa" style="background-color: yellow "> 
-            <form action="index.jsp">
-                <fieldset >
+            <form name="keko2" action="index.jsp">
+                <fieldset>
+                   
                 <legend style="color: blue; font-size:50px">COMPRA REALIZADA CON EXITO! Y LA MAMI?</legend>
+                Fecha de compra: 
+                Hora de compra: 
+                <hr>
                 Nombre de Usuario : <label id="datos" style="color: red;"><%= usuario.getNombre()%></label>
+              
+                
                 <hr>
                 Correo Electronico : <label id="datos" style="color: red" ><%= usuario.getEmail() %></label>
                 <hr>
@@ -141,6 +151,8 @@
 		    <tr> <!--  PRIMERA FILA -->
 		    		<!-- TITULO DE LA TABLA CON TH -->
 		          	<th>N° de Tarjeta de Credito: </th>
+               
+                              
 				<td> </td>
 		   		
 		    </tr>
