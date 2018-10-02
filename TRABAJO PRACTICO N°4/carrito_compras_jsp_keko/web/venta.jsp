@@ -97,7 +97,10 @@
         
         
         <div class="container-fluid text-center" id="formularioventa"> 
-            <form name="keko" id="keko" action="ventarealizada.jsp">
+            
+            Venta venta;
+            
+            <form name="keko" id="keko" action="recibedatosventa.jsp" method="post">
                 <fieldset>
                 <legend>Formulario de Confirmacion de Compra!</legend>
                 Nombre de Usuario : <label id="datos"><%= usuario.getNombre()%></label>
@@ -191,6 +194,9 @@
             </fieldset>
                 
                 
+                       
+                        
+                        
                 
             </form>
             

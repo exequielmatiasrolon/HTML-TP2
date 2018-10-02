@@ -6,6 +6,9 @@
 package model;
 
 import java.io.Serializable;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+
 
 /**
  *
@@ -20,6 +23,18 @@ public class Venta implements Serializable{
     private String Hora;
     private String NroTarjeta;
     private String Montocompra;
+    
+   
+
+    public void agregarVenta(Venta venta){
+    
+        
+        
+    
+    
+    }
+    
+    
 
     public String getFecha() {
         return Fecha;
