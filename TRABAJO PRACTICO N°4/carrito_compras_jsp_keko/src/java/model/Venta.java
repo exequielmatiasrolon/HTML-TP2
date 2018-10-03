@@ -6,6 +6,8 @@
 package model;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
+import java.sql.Date;
 
 /**
  *
@@ -19,7 +21,9 @@ public class Venta implements Serializable{
     private String Fecha;
     private String Hora;
     private String NroTarjeta;
-    private String Montocompra;
+    private BigDecimal Montocompra;
+    private String medPago;
+    private Integer idventas;
 
     public String getFecha() {
         return Fecha;
@@ -45,11 +49,11 @@ public class Venta implements Serializable{
         this.NroTarjeta = NroTarjeta;
     }
 
-    public String getMontocompra() {
+    public BigDecimal getMontocompra() {
         return Montocompra;
     }
 
-    public void setMontocompra(String Montocompra) {
+    public void setMontocompra(BigDecimal Montocompra) {
         this.Montocompra = Montocompra;
     }
     
@@ -70,5 +74,16 @@ public class Venta implements Serializable{
         this.email = email;
     }
     
-    
+    /**
+     *
+     * @param usuario
+     * @param monto
+     */
+   /* public  Venta( String usuario, BigDecimal monto){
+       
+        this.nombre=usuario;
+        this.Montocompra=monto;
+       // this.medPago=medPago1;
+        
+    }*/
 }

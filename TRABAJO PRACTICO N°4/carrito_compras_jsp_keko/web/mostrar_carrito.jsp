@@ -1,3 +1,4 @@
+<%@page import="model.Venta"%>
 <%@page contentType="text/html" language="java" pageEncoding="UTF-8"%>  
 
 <%@page import="RN.ProductoRN"%>
@@ -23,6 +24,8 @@
     } else {
         carrito= (Carrito) session.getAttribute("carrito");
     }
+
+  
 %>
     
 <!DOCTYPE html>

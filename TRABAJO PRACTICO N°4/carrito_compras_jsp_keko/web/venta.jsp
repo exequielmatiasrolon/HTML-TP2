@@ -97,7 +97,7 @@
         
         
         <div class="container-fluid text-center" id="formularioventa"> 
-            <form name="keko" id="keko" action="ventarealizada.jsp">
+            <form name="keko" id="keko" action="confirmaVenta.jsp" method="post">
                 <fieldset>
                 <legend>Formulario de Confirmacion de Compra!</legend>
                 Nombre de Usuario : <label id="datos"><%= usuario.getNombre()%></label>
@@ -145,11 +145,13 @@
                 <div class="container-fluid text-center" >
                     <table class="table table-hover  text-center" style="width:100%">
 
+                        
+                        
 		    <tr> <!--  PRIMERA FILA -->
 		    		<!-- TITULO DE LA TABLA CON TH -->
                                 
                                
-                                
+                    <form action="confirmaVenta.jsp"  method="post" >                        
                                 
                                 
 		          	<th> Ingrese N° de Tarjeta de Credito: </th>
@@ -168,7 +170,6 @@
                                   <td> <input  type="text" maxlength="3" id="codigotarjeta" name="codigotarjeta" required title="Ingrese el Codigo de Seguridad de su Tarjeta"></td>
 		     		 
 		    </tr>	
-	    
 	  </table>
                 </div>
                 
@@ -187,7 +188,8 @@
                         <input class="btn btn-success text-center" type="submit" value="Confirmar la Compra" >
                     
                       <hr>
-                
+                                    
+
             </fieldset>
                 
                 
