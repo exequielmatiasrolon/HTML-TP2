@@ -43,7 +43,7 @@
     v.setHora(hora.format(hoy));
     v.setMontocompra(total);
     v.setNroTarjeta(request.getParameter("numerotarjeta"));
-    id  = VentaRN.guardarVenta(v);
+    v.setIdVentas( VentaRN.guardarVenta(v));
  
 %>
   
@@ -61,12 +61,44 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Su numero de ticket es: <% out.println(id); %></h1>
+        
+          <table border="1">
+            <tr>
+                <th colspan="2">Datos que se reciben:</th>
+            </tr>
+            <!-- imprimiendo parametros que fueron rescatados -->
+            <tr> 
+                <td>Usuario:</td><td><% out.println( v.getNombre() );%></td>
+            </tr>
+            <tr>
+                <td>Mail:</td><td><% out.println(usuario.getEmail()); %></td>
+            </tr>
+            <tr>
+                <td>Numero Tarjeta:</td><td><%= v.getNroTarjeta() %></td>
+            </tr>
+                 
+            <tr>
+                <td>Fecha:</td><td> <% out.println(v.getFecha()); %> </td>
+            </tr>
+            <tr>
+                <td>Hora:</td><td><%= v.getHora() %></td>
+            </tr>
+            <tr>
+                <td>Total productos a comprar: </td><td><%= carrito.contarProductos()%>:</td>
+            </tr>
+              <tr>
+                <td>   Monto Total del Carrito:</td><td><%= v.getMontocompra() %></td>
+            </tr>
+            <tr>
+                <td>Su numero de ticket es:</td><td> <% out.println(v.getIdVentas() ); %></td>
+            </tr>
+            
+        </table>  
+        
+        
+        
         <br>
-        <h2><% out.println(hora.format(hoy)); %></h2>
-        <label><% out.println(v.getNombre()); %></label>
-        <br>
-    <laber><% out.println(v.getMontocompra()); %></laber>
+       
       
     </body>
 </html>

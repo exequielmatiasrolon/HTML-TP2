@@ -6,14 +6,12 @@
 package model;
 
 import java.io.Serializable;
-<<<<<<< HEAD
 import java.math.BigDecimal;
 import java.sql.Date;
-=======
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
->>>>>>> c8b9406b7759b8ad4656111a35b99eb513530457
+
 
 /**
  *
@@ -27,12 +25,9 @@ public class Venta implements Serializable{
     private String Fecha;
     private String Hora;
     private String NroTarjeta;
-<<<<<<< HEAD
     private BigDecimal Montocompra;
     private String medPago;
-    private Integer idventas;
-=======
-    private String Montocompra;
+    private String idventas;
     
    
 
@@ -44,8 +39,6 @@ public class Venta implements Serializable{
     
     }
     
-    
->>>>>>> c8b9406b7759b8ad4656111a35b99eb513530457
 
     public String getFecha() {
         return Fecha;
@@ -96,6 +89,15 @@ public class Venta implements Serializable{
         this.email = email;
     }
     
+    public String getIdVentas(){
+        return idventas;
+    }
+    
+    public void setIdVentas(String idVentas){
+        this.idventas = idVentas;
+    }
+    
+   
     /**
      *
      * @param usuario

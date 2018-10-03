@@ -1,4 +1,8 @@
 
+<%@page import="RN.VentaRN"%>
+<%@page import="java.math.BigDecimal"%>
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="java.text.DateFormat"%>
 <%@page import="model.Venta"%>
 <%@page import="java.sql.Date"%>
 <%@page contentType="text/html" language="java" pageEncoding="UTF-8"%>  
@@ -9,7 +13,7 @@
 <%@page import="model.Producto"%>
 <%@page import="model.Carrito"%>
 <%@page import="model.Usuario" session="true"%>
-
+<%@page import="java.util.Date"%>
 
 <%
   Usuario usuario= (Usuario) session.getAttribute("usuario");   
@@ -29,6 +33,21 @@
     } else {
         carrito= (Carrito) session.getAttribute("carrito");
     }
+
+   // Date hoy = new Date();
+    DateFormat hora = new SimpleDateFormat("HH:mm:ss");
+    DateFormat fechas = new SimpleDateFormat("dd/MM/yyyy");
+    BigDecimal total= carrito.sumarMontoProductos();
+    String id;
+   //Genero el objeto venta nombre v
+    Venta v = new Venta();    //VentaRN.guardarVenta(usuario.getNombre(),total);
+    // doy valores al objeto
+    v.setNombre(usuario.getNombre());
+    v.setFecha(fechas.format(hoy));
+    v.setHora(hora.format(hoy));
+    v.setMontocompra(total);
+    v.setNroTarjeta(request.getParameter("numerotarjeta"));
+    v.setIdVentas( VentaRN.guardarVenta(v));
 %>
   
    
