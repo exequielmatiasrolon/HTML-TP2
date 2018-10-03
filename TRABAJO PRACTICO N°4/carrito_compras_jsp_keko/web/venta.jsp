@@ -97,7 +97,14 @@
         
         
         <div class="container-fluid text-center" id="formularioventa"> 
+<<<<<<< HEAD
             <form name="keko" id="keko" action="confirmaVenta.jsp" method="post">
+=======
+            
+            Venta venta;
+            
+            <form name="keko" id="keko" action="recibedatosventa.jsp" method="post">
+>>>>>>> c8b9406b7759b8ad4656111a35b99eb513530457
                 <fieldset>
                 <legend>Formulario de Confirmacion de Compra!</legend>
                 Nombre de Usuario : <label id="datos"><%= usuario.getNombre()%></label>
@@ -193,6 +200,9 @@
             </fieldset>
                 
                 
+                       
+                        
+                        
                 
             </form>
             
