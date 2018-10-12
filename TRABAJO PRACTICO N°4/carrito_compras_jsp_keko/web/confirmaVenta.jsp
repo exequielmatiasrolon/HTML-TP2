@@ -43,7 +43,7 @@
     v.setHora(hora.format(hoy));
     v.setMontocompra(total);
     v.setNroTarjeta(request.getParameter("numerotarjeta"));
-    v.setIdVentas( VentaRN.guardarVenta(v));
+    
  
 %>
   
